@@ -11,10 +11,40 @@
   padding: 20px;
 }
 
+.controll-buttons{
+  display: flex;
+  justify-content: center;
+  width: 320px;
+}
+.controll-buttons > *{
+  margin: 3px 10px;
+  cursor: pointer;
+}
 
+.aditional-form-button{
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  margin-top: 10px;
+}
 
 .call-form {
   padding: 20px;
+  border: 2px solid black;
+  margin: 10px 20px;
+}
+
+.call-inputs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.call-inputs > label{
+  margin: 10px;
+  width: 300px;
+  text-align: right;
 }
 
 input, button {
@@ -22,5 +52,5 @@ input, button {
 }
 
 .active-speaker{
-  border: 2px solid #5feb1a;
+  border: 2px solid hsl(0, 100%, 57%);
 }

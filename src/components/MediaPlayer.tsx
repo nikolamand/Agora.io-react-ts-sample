@@ -29,12 +29,13 @@ const MediaPlayer = (props: VideoPlayerProps) => {
     if(props.volumeIndicator === undefined) container.current?.classList.remove('active-speaker');
     props.volumeIndicator?.forEach(volume => {
       if(!activeSpeaker || (volume.level >= 3 && activeSpeaker.level < volume.level)){
+        console.debug(`New active speaker, UID: ${volume.uid}, Level: ${volume.level}`);
         setActiveSpeaker(volume);
       }
       if(container.current?.id === `user-${activeSpeaker?.uid}`)
-        container.current?.classList.add('active-speaker')
+        container.current?.classList.add('active-speaker');
       else
-        container.current?.classList.remove('active-speaker')
+        container.current?.classList.remove('active-speaker');
     });
   }, [props.volumeIndicator, activeSpeaker]);
   return (
